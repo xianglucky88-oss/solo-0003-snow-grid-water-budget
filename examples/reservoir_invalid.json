@@ -1,0 +1,32 @@
+{
+  "survey": "reservoir-invalid-demo",
+  "source_cells": [
+    {"id": "u", "box_m": [0, 0, 2, 2], "swe_mm": 1000},
+    {"id": "z", "box_m": [2, 0, 4, 2], "swe_mm": 0},
+    {"id": "m", "box_m": [4, 0, 6, 2], "swe_mm": null},
+    {"id": "q", "box_m": [0, 2, 2, 4], "swe_mm": null},
+    {"id": "n", "box_m": [2, 2, 4, 4], "swe_mm": null},
+    {"id": "v", "box_m": [4, 2, 6, 4], "swe_mm": 500}
+  ],
+  "targets": [
+    {"id": "north-row", "box_m": [0, 0, 6, 2]}
+  ],
+  "basins": [
+    {"id": "all", "box_m": [0, 0, 6, 4]}
+  ],
+  "source_bands": [
+    {"id": "north", "cells": ["u", "z", "m"]},
+    {"id": "south", "cells": ["q", "n", "v"]}
+  ],
+  "missing_caps_m3": [
+    {"band": "south", "limit_m3": 1}
+  ],
+  "reservoirs": [
+    {"id": "R1", "zone": "z1", "box_m": [0, 0, 3, 4], "capacity_m3": "3/2", "outlet": "R3"},
+    {"id": "R2", "zone": "z2", "box_m": [2, 0, 4, 4], "capacity_m3": "1/2", "outlet": "R3"},
+    {"id": "R3", "zone": "z3", "box_m": [4, 0, 6, 4], "capacity_m3": "1/2"}
+  ],
+  "overflow_claims": [
+    ["R1", "R2"]
+  ]
+}
