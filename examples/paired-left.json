@@ -1,0 +1,85 @@
+{
+  "survey": "paired-demo",
+  "forecasts": [
+    {
+      "id": "alpha",
+      "source_cells": [
+        {
+          "id": "a-west",
+          "box_m": [0, 0, 3, 4],
+          "swe_mm": 300
+        },
+        {
+          "id": "a-east",
+          "box_m": [3, 0, 5, 4],
+          "swe_mm": 100
+        },
+        {
+          "id": "a-zero",
+          "box_m": [5, 0, 6, 4],
+          "swe_mm": 0
+        },
+        {
+          "id": "a-only",
+          "box_m": [6, 0, 7, 4],
+          "swe_mm": 100
+        }
+      ]
+    },
+    {
+      "id": "beta",
+      "source_cells": [
+        {
+          "id": "b-west",
+          "box_m": [0, 0, 2, 4],
+          "swe_mm": 200
+        },
+        {
+          "id": "b-mid",
+          "box_m": [2, 0, 4, 4],
+          "swe_mm": 300
+        },
+        {
+          "id": "b-east",
+          "box_m": [4, 0, 5, 4],
+          "swe_mm": 100
+        },
+        {
+          "id": "b-zero",
+          "box_m": [5, 0, 6, 4],
+          "swe_mm": 0
+        },
+        {
+          "id": "b-only",
+          "box_m": [7, 0, 8, 4],
+          "swe_mm": 50
+        },
+        {
+          "id": "b-null",
+          "box_m": [8, 0, 9, 4],
+          "swe_mm": null
+        }
+      ]
+    }
+  ],
+  "basins": [
+    {
+      "id": "all",
+      "box_m": [0, 0, 9, 4]
+    }
+  ],
+  "zones": [
+    {
+      "id": "c-west",
+      "basin": "all",
+      "box_m": [0, 0, 3, 4],
+      "threshold_m3": "1/2"
+    },
+    {
+      "id": "c-east",
+      "box_m": [3, 0, 6, 4],
+      "basin": "all",
+      "threshold_m3": "1/2"
+    }
+  ]
+}

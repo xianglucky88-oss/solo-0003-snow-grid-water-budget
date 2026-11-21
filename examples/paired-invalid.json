@@ -1,0 +1,45 @@
+{
+  "survey": "paired-demo",
+  "forecasts": [
+    {
+      "id": "alpha",
+      "source_cells": [
+        {
+          "id": "a-west",
+          "box_m": [0, 0, 3, 4],
+          "swe_mm": 300
+        }
+      ]
+    },
+    {
+      "id": "beta",
+      "source_cells": [
+        {
+          "id": "b-west",
+          "box_m": [0, 0, 2, 4],
+          "swe_mm": 200
+        }
+      ]
+    }
+  ],
+  "basins": [
+    {
+      "id": "all",
+      "box_m": [0, 0, 9, 4]
+    }
+  ],
+  "zones": [
+    {
+      "id": "c-west",
+      "basin": "all",
+      "box_m": [0, 0, 3, 4],
+      "threshold_m3": "1/2"
+    },
+    {
+      "id": "c-east",
+      "basin": "all",
+      "box_m": [3, 0, 10, 4],
+      "threshold_m3": "1/2"
+    }
+  ]
+}
