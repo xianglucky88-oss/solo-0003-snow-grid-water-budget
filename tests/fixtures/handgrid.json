@@ -1,0 +1,24 @@
+{
+  "survey": "handgrid",
+  "source_cells": [
+    {"id": "a", "box_m": [0, 0, 1, 2], "swe_mm": 100},
+    {"id": "b", "box_m": [1, 0, 2, 2], "swe_mm": 0},
+    {"id": "f1", "box_m": [2, 0, 3, 2], "swe_mm": 300},
+    {"id": "f2", "box_m": [3, 0, 4, 2], "swe_mm": 300},
+    {"id": "m", "box_m": [4, 0, 5, 2], "swe_mm": null}
+  ],
+  "targets": [
+    {"id": "west", "box_m": [0, 0, 2, 2]},
+    {"id": "frag-mix", "box_m": [2, 0, 5, 2]},
+    {"id": "outside", "box_m": [5, 0, 6, 2]}
+  ],
+  "basins": [
+    {"id": "west", "box_m": [0, 0, 2, 2]},
+    {"id": "frags", "box_m": [2, 0, 4, 2]},
+    {"id": "shed-left", "box_m": [0, 0, 3, 2]},
+    {"id": "shed-right", "box_m": [2, 0, 5, 2]},
+    {"id": "domain", "box_m": [0, 0, 6, 2]},
+    {"id": "dry", "box_m": [1, 0, 2, 2]},
+    {"id": "miss", "box_m": [4, 0, 5, 2]}
+  ]
+}
