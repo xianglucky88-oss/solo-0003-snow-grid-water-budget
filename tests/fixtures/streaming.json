@@ -1,0 +1,57 @@
+{
+  "survey": "band-stream",
+  "source_cells": [
+    {
+      "id": "s0a",
+      "box_m": [0, 0, 2, 2],
+      "swe_mm": 250
+    },
+    {
+      "id": "s0b",
+      "box_m": [2, 0, 4, 2],
+      "swe_mm": 0
+    },
+    {
+      "id": "s1n",
+      "box_m": [0, 2, 2, 4],
+      "swe_mm": null
+    },
+    {
+      "id": "s1v",
+      "box_m": [2, 2, 4, 4],
+      "swe_mm": 500
+    }
+  ],
+  "targets": [
+    {
+      "id": "early",
+      "box_m": [0, 0, 4, 2]
+    },
+    {
+      "id": "cross",
+      "box_m": ["1/2", 2, "5/2", 3]
+    },
+    {
+      "id": "beyond",
+      "box_m": [4, 0, 6, 4]
+    }
+  ],
+  "basins": [
+    {
+      "id": "dry",
+      "box_m": [2, 0, 4, 2]
+    },
+    {
+      "id": "wide-a",
+      "box_m": [0, 1, 3, 3]
+    },
+    {
+      "id": "wide-b",
+      "box_m": [1, 1, 4, 3]
+    },
+    {
+      "id": "miss",
+      "box_m": [0, 2, 2, 4]
+    }
+  ]
+}
