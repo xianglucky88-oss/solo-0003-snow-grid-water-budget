@@ -1,0 +1,59 @@
+{
+  "survey": "snow-demo-elevation",
+  "source_cells": [
+    {
+      "id": "w",
+      "box_m": [0, 0, 8, 2],
+      "swe_mm": 250
+    },
+    {
+      "id": "z",
+      "box_m": [0, 2, 8, 3],
+      "swe_mm": 0
+    },
+    {
+      "id": "m",
+      "box_m": [0, 3, 8, 4],
+      "swe_mm": null
+    }
+  ],
+  "targets": [
+    {
+      "id": "whole",
+      "box_m": [0, 0, 8, 4]
+    }
+  ],
+  "basins": [
+    {
+      "id": "west",
+      "box_m": [0, 0, 4, 4]
+    },
+    {
+      "id": "east",
+      "box_m": [4, 0, 8, 4]
+    }
+  ],
+  "elevation_bands": [
+    {
+      "id": "low",
+      "span_m": [0, 500]
+    },
+    {
+      "id": "high",
+      "span_m": [500, 2000]
+    }
+  ],
+  "elevation_schemes": [
+    {
+      "id": "scheme-a",
+      "cells": [
+        {
+          "id": "a-left",
+          "box_m": [0, 0, 6, 3],
+          "elevation_m": 200
+        }
+      ]
+    }
+  ],
+  "coverage_choice": "scheme-ghost"
+}

@@ -11,6 +11,26 @@ def area(box):
     return (box[2] - box[0]) * (box[3] - box[1])
 
 
+def subtract(rect, hole):
+    """Axis-aligned rectangle difference: the parts of rect outside hole (up to four rectangles)."""
+    if overlap(rect, hole) == 0:
+        return [rect]
+    x0, y0, x1, y1 = rect
+    hx0, hy0, hx1, hy1 = hole
+    ix0, ix1 = max(x0, hx0), min(x1, hx1)
+    parts = []
+    if x0 < hx0:
+        parts.append((x0, y0, hx0, y1))
+    if hx1 < x1:
+        parts.append((hx1, y0, x1, y1))
+    if ix0 < ix1:  # side strips may already cover the full width; skip degenerate bands
+        if y0 < hy0:
+            parts.append((ix0, y0, ix1, hy0))
+        if hy1 < y1:
+            parts.append((ix0, hy1, ix1, y1))
+    return [part for part in parts if area(part) > 0]
+
+
 def read_boxes(rows, nonoverlap=False):
     result = {}
     for key, row in sorted(unique(rows).items()):
