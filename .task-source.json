@@ -1,0 +1,9 @@
+{
+  "project_domain": "数据工程",
+  "project_subdirection": "其他",
+  "profile": "local-only",
+  "source_project": "snow-grid-water-budget",
+  "runtime": "Python 3.14 + sqlite3",
+  "entrypoint": "python3 -m snowbudget",
+  "data_origin": "synthetic"
+}
