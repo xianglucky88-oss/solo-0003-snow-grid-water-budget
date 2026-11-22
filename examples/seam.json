@@ -1,0 +1,151 @@
+{
+  "survey": "seam-demo",
+  "source_cells": [
+    {
+      "id": "west",
+      "box_m": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "swe_mm": 250,
+      "evidence": 2
+    },
+    {
+      "id": "base",
+      "box_m": [
+        2,
+        0,
+        4,
+        4
+      ],
+      "swe_mm": 125,
+      "evidence": 1
+    },
+    {
+      "id": "east",
+      "box_m": [
+        3,
+        0,
+        6,
+        4
+      ],
+      "swe_mm": 500,
+      "evidence": 2
+    },
+    {
+      "id": "tail",
+      "box_m": [
+        6,
+        0,
+        8,
+        4
+      ],
+      "swe_mm": 0,
+      "evidence": 2
+    },
+    {
+      "id": "aux",
+      "box_m": [
+        7,
+        0,
+        9,
+        4
+      ],
+      "swe_mm": 125,
+      "evidence": 1
+    },
+    {
+      "id": "pair",
+      "box_m": [
+        8,
+        0,
+        10,
+        4
+      ],
+      "swe_mm": 250,
+      "evidence": 2
+    },
+    {
+      "id": "dup",
+      "box_m": [
+        9,
+        0,
+        11,
+        4
+      ],
+      "swe_mm": 500,
+      "evidence": 2
+    },
+    {
+      "id": "void",
+      "box_m": [
+        11,
+        0,
+        13,
+        4
+      ],
+      "swe_mm": null,
+      "evidence": 2
+    }
+  ],
+  "targets": [
+    {
+      "id": "west-half",
+      "box_m": [
+        0,
+        0,
+        2,
+        4
+      ]
+    },
+    {
+      "id": "seam",
+      "box_m": [
+        2,
+        0,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "east-side",
+      "box_m": [
+        4,
+        0,
+        6,
+        4
+      ]
+    },
+    {
+      "id": "rest",
+      "box_m": [
+        6,
+        0,
+        13,
+        4
+      ]
+    }
+  ],
+  "basins": [
+    {
+      "id": "all",
+      "box_m": [
+        0,
+        0,
+        13,
+        4
+      ]
+    },
+    {
+      "id": "spill",
+      "box_m": [
+        0,
+        0,
+        13,
+        5
+      ]
+    }
+  ]
+}

@@ -10,7 +10,13 @@ python3 -m snowbudget history ledger.sqlite
 python3 -m snowbudget show ledger.sqlite original
 python3 -m snowbudget source ledger.sqlite original
 python3 -m snowbudget replay ledger.sqlite revised
+
+python3 -m snowbudget preview examples/seam.json
+python3 -m snowbudget preview examples/withdrawn.json
+python3 -m unittest discover -s tests
 ```
+
+接缝样例演示同一时次两块瓦片的采信判决；撤回样例只撤回同级冲突中的一方，其余接缝与独有区域保持不变。无重叠输入（`baseline.json`、`changed.json`）仍输出原读法，`invalid.json` 仍以状态 2 拒绝。
 
 `preview` 不写库；`show` 读已发布成果，`source` 读随版封存的输入，`replay` 重算并核对。`publish` 不覆盖已用版名。命令在输入错误时以状态 2 退出，不发布结果。重复演示请换版名或用新库。
 

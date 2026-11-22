@@ -1,3 +1,4 @@
+from .acceptance import retractions
 from .basins import report
 from .field import cells
 from .geometry import read_boxes
@@ -8,5 +9,7 @@ DESCRIPTION = 'Reduce a synthetic equal-area SWE grid to independent grid and ba
 
 def materialize(doc):
     source = cells(doc['source_cells'])
-    return {'survey': doc['survey'], 'target_grid': list(regrid(source, read_boxes(doc['targets'], nonoverlap=True))),
-            'basins': list(report(source, read_boxes(doc['basins'])))}
+    withdrawn = retractions(doc.get('retractions') or [], source)
+    return {'survey': doc['survey'],
+            'target_grid': list(regrid(source, read_boxes(doc['targets'], nonoverlap=True), withdrawn)),
+            'basins': list(report(source, read_boxes(doc['basins']), withdrawn))}
