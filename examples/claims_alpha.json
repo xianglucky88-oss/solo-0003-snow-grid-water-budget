@@ -1,0 +1,28 @@
+{
+  "survey": "snow-demo",
+  "source_cells": [
+    {"id": "u", "box_m": [0, 0, 2, 2], "swe_mm": 250},
+    {"id": "z", "box_m": [2, 0, 4, 2], "swe_mm": 0},
+    {"id": "m", "box_m": [0, 2, 2, 4], "swe_mm": null},
+    {"id": "v", "box_m": [2, 2, 4, 4], "swe_mm": 500}
+  ],
+  "targets": [
+    {"id": "wide", "box_m": [0, 0, 4, 2]},
+    {"id": "north", "box_m": [0, 2, 4, 4]},
+    {"id": "outside", "box_m": [4, 4, 6, 6]}
+  ],
+  "basins": [
+    {"id": "mother", "box_m": [0, 0, 4, 6]},
+    {"id": "alpha", "box_m": [0, 0, 3, 4]},
+    {"id": "bravo", "box_m": [1, 0, 4, 4]},
+    {"id": "charlie", "box_m": [0, 4, 4, 6]}
+  ],
+  "declaration": {
+    "parent_basin": "mother",
+    "sub_basins": ["alpha", "bravo", "charlie"],
+    "certificates": [
+      {"id": "c1", "basin": "alpha", "box_m": [1, 0, 2, 2]},
+      {"id": "c2", "basin": "alpha", "box_m": [2, 2, 3, 3]}
+    ]
+  }
+}

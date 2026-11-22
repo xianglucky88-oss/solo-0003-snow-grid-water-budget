@@ -7,6 +7,11 @@ def overlap(a, b):
     return dx * dy if dx > 0 and dy > 0 else 0
 
 
+def contains(outer, inner):
+    return (outer[0] <= inner[0] and outer[2] >= inner[2]
+            and outer[1] <= inner[1] and outer[3] >= inner[3])
+
+
 def area(box):
     return (box[2] - box[0]) * (box[3] - box[1])
 
