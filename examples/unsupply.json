@@ -1,0 +1,70 @@
+{
+  "survey": "supply-deny",
+  "source_cells": [
+    {
+      "id": "u",
+      "box_m": [
+        0,
+        0,
+        4,
+        4
+      ],
+      "swe_mm": 500
+    }
+  ],
+  "targets": [
+    {
+      "id": "wide",
+      "box_m": [
+        0,
+        0,
+        4,
+        4
+      ]
+    },
+    {
+      "id": "outside",
+      "box_m": [
+        4,
+        0,
+        6,
+        2
+      ]
+    }
+  ],
+  "basins": [
+    {
+      "id": "alpha",
+      "box_m": [
+        0,
+        0,
+        4,
+        3
+      ]
+    },
+    {
+      "id": "bravo",
+      "box_m": [
+        0,
+        1,
+        4,
+        4
+      ]
+    }
+  ],
+  "supply_plan": {
+    "threshold_mm": 250,
+    "requirements": [
+      {
+        "basin": "alpha",
+        "min_qualifying_m2": 10,
+        "min_complete_m3": 5
+      },
+      {
+        "basin": "bravo",
+        "min_qualifying_m2": 10,
+        "min_complete_m3": 5
+      }
+    ]
+  }
+}
